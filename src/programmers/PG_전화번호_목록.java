@@ -9,7 +9,7 @@ package programmers;
 import java.util.Arrays;
 import java.util.HashSet;
 
-class Solution {
+public class PG_전화번호_목록 {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
         HashSet<String> hashSet = new HashSet<>(Arrays.asList(phone_book));
@@ -25,12 +25,9 @@ class Solution {
         }
         return answer;
     }
-}
-
-public class PG_전화번호_목록 {
     public static void main(String[] args) {
         Boolean answer;
-        Solution solution = new Solution();
+        PG_전화번호_목록 solution = new PG_전화번호_목록();
         String[] phone_book = {"123", "456", "789"};
         answer = solution.solution(phone_book);
         System.out.println(answer);
