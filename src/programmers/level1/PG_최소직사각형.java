@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level1;
 
 /**
  * 가로,세로 중 가장 큰거에 맞추자.
