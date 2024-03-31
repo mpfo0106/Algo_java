@@ -45,41 +45,7 @@ public class XPG_괄호회전하기 {
     }
 }
 
-//        for (int i = 0; i < s.length(); i++) {
-//            if (deque.isEmpty()) {
-//                return answer;
-//            }
-//            char ch = deque.pollFirst();
-//            if (ch == ')' || ch == '}' || ch == ']') {
-//                boolean isMatch = false;
-//                if (ch == ')') {
-//                    if (deque.peekLast() == '(') {
-//                        isMatch = true;
-//                    }
-//                }
-//                if (ch == '}') {
-//                    if (deque.peekLast() == '{') {
-//                        isMatch = true;
-//                    }
-//                }
-//                if (ch == ']') {
-//                    if (deque.peekLast() == '[') {
-//                        isMatch = true;
-//                    }
-//                }
-//                if (isMatch) {
-//                    deque.pollLast();
-//                    answer += 1;
-//                }
-//            } else {
-//                deque.addLast(ch);
-//            }
-//
-//        }
-//        return answer;
-//
-//    }
-//}
+
 /**
  * 1. deque 을 이용해서 첫번째와 마지막이 만나면 pop을 하려했음 => 일부 정답이지만 nullpointer 에러
  * switch case 문을 이용하기.
