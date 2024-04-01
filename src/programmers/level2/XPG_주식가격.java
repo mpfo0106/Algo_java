@@ -16,7 +16,6 @@ public class XPG_주식가격 {
     public static void main(String[] args) {
         int[] prices = {1, 2, 3, 2, 3};
         System.out.println(Arrays.toString(solution(prices)));
-
     }
 
     //스택을 사용해보자
@@ -39,7 +38,6 @@ public class XPG_주식가격 {
         }
         return answer;
     }
-
 }
 
 /**
