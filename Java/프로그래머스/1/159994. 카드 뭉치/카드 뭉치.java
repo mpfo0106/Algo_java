@@ -1,16 +1,9 @@
-import java.util.Queue;
 import java.util.ArrayDeque;
+import java.util.Arrays;
 class Solution {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
-        Queue<String> queue1 = new ArrayDeque();
-        Queue<String> queue2 = new ArrayDeque();
-        String answer = "No";
-        for(String card1 : cards1){
-            queue1.add(card1);
-        }
-        for(String card2 : cards2){
-            queue2.add(card2);
-        }
+        ArrayDeque<String> queue1 = new ArrayDeque<>(Arrays.asList(cards1));
+        ArrayDeque<String> queue2 = new ArrayDeque<>(Arrays.asList(cards2));
         
         for(String word: goal){
             String word1 = queue1.peek();
@@ -23,11 +16,9 @@ class Solution {
                 }
             }
             else{
-                return answer;
+                return "No";
             }
         }
-        answer = "Yes";
-        
-        return answer;
+        return "Yes";
     }
 }
