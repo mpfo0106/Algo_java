@@ -1,29 +1,29 @@
 import java.util.ArrayDeque;
-import java.util.ArrayList;
+
 class Solution {
-          public static ArrayList<Integer> solution(int[] progresses, int[] speeds) {
-        ArrayDeque<Integer> deque = new ArrayDeque<>();
-        ArrayDeque<Integer> speedDeque = new ArrayDeque<>();
-        ArrayList<Integer> answer = new ArrayList<>();
-        int days = 0;
-        for (int progress : progresses) {
-            deque.addLast(progress);
+    public int[] solution(int[] progresses, int[] speeds) {
+        int n = progresses.length;
+        int[] days = new int[n];
+        ArrayDeque<Integer> answer = new ArrayDeque<>();
+        
+        for(int i=0; i<n; i++){
+            days[i] = (int)Math.ceil((100.0- progresses[i])/speeds[i]);
         }
-        for (int speed : speeds) {
-            speedDeque.addLast(speed);
+        int cnt = 0;
+        int maxDay = days[0];
+        
+    for(int i=0; i<n; i++){
+        if(days[i] <= maxDay){
+            cnt++;
         }
-        while (!deque.isEmpty()) {
-            int cnt = 0;
-            while (!deque.isEmpty() && deque.peekFirst() + speedDeque.peekFirst() * days >= 100) {
-                deque.pollFirst();
-                speedDeque.pollFirst();
-                cnt += 1;
-            }
-            if (cnt > 0) {
-                answer.add(cnt);
-            }
-            days += 1;
+        else{
+            answer.addLast(cnt);
+            maxDay = days[i];
+            cnt = 1;
         }
-        return answer;
+    }
+        answer.addLast(cnt); 
+        
+    return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 }
