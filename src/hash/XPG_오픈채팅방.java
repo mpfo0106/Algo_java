@@ -52,4 +52,10 @@ public class XPG_오픈채팅방 {
  * 2. 또 언제 값이 변하는지, 어떤값이 안변하는지를 처음에 분석하면 쓸데없는 코드를 줄일 수 있음.
  * 3. 겁이 너무 많았던게 문제.
  * 4. ArrayList 를 toArray(new String[0]) 으로 변환하는법
+ * <p>
+ * ArrayList 를 잘 사용하는법,
+ */
+
+/**
+ * ArrayList 를 잘 사용하는법,
  */
